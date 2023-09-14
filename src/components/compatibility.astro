@@ -1,89 +1,74 @@
 ---
 import CompatibilityList from "~/components/compatibility-list.astro";
 import ContentSection from "~/components/content-section.astro";
-import type { CompatibilityItem } from "~/types";
 
-const frameworks: Array<CompatibilityItem> = [
+const tecnologies = [
   {
-    title: "React",
-    icon: "frameworks/react",
-    url: "https://reactjs.org/",
+    title: "Html",
+    icon: "tecnologies/html",
+    url: "https://lenguajehtml.com/",
   },
   {
-    title: "Preact",
-    icon: "frameworks/preact",
-    url: "https://preactjs.com/",
+    title: "Css",
+    icon: "tecnologies/css-icon",
+    url: "https://developer.mozilla.org/es/docs/Web/CSS",
   },
   {
-    title: "Svelte",
-    icon: "frameworks/svelte",
-    url: "https://svelte.dev/",
+    title: "Sass",
+    icon: "tecnologies/sass",
+    url: "https://sass-lang.com/",
   },
   {
-    title: "Vue",
-    icon: "frameworks/vue",
+    title: "Tailwindcss",
+    icon: "tecnologies/tailwind",
+    url: "https://tailwindcss.com/",
+  },
+  {
+    title: "Javascript",
+    icon: "tecnologies/javascript",
+    url: "https://developer.mozilla.org/es/docs/Web/JavaScript",
+  },
+  {
+    title: "Vue.js",
+    icon: "tecnologies/vue",
     url: "https://vuejs.org/",
   },
   {
-    title: "Solid",
-    icon: "frameworks/solid",
-    url: "https://www.solidjs.com/",
+    title: "Pinia",
+    icon: "tecnologies/pinia",
+    url: "https://pinia.vuejs.org/",
   },
   {
-    title: "Lit",
-    icon: "frameworks/lit",
-    url: "https://lit.dev/",
-  },
-];
-
-const platforms: Array<CompatibilityItem> = [
-  {
-    title: "Netlify",
-    icon: "platforms/netlify",
-    url: "https://www.netlify.com/",
+    title: "Firebase",
+    icon: "tecnologies/firebase",
+    url: "https://firebase.com",
   },
   {
-    title: "Vercel",
-    icon: "platforms/vercel",
-    url: "https://vercel.com/",
+    title: "Astro",
+    icon: "tecnologies/astro-icon",
+    url: "https://astro.com",
   },
   {
-    title: "Cloudflare",
-    icon: "fa-brands:cloudflare",
-    url: "https://pages.cloudflare.com/",
-  },
-  {
-    title: "Render",
-    icon: "platforms/render",
-    url: "https://render.com/",
+    title: "Git",
+    icon: "tecnologies/git",
+    url: "https://git.com",
   },
   {
     title: "GitHub",
-    icon: "fa-brands:github",
-    url: "https://pages.github.com/",
-  },
-  {
-    title: "GitLab",
-    icon: "fa-brands:gitlab",
-    url: "https://docs.gitlab.com/ee/user/project/pages/",
-  },
+    icon: "tecnologies/github",
+    url: "https://github.com",
+  }
 ];
 ---
 
-<ContentSection title="Compatibility" id="compatibility">
+<ContentSection title="Tecnologías" id="compatibility">
   <Fragment slot="lead">
-    Astro <span class="text-primary">plays nice</span>. Bring your own UI{" "}
-    <span class="text-primary">framework</span>
-     and deploy to your favorite <span class="text-primary">platform</span>.
+    He <span class="text-primary">creado</span>proyectos haciendo uso de las siguientes
+    <span class="text-primary">tecnologías y herramientas</span>
   </Fragment>
   <CompatibilityList
-    items={frameworks}
-    title="Frameworks"
+    items={tecnologies}
+    title="Stack"
     url="https://docs.astro.build/core-concepts/framework-components/"
-  />
-  <CompatibilityList
-    items={platforms}
-    title="Platforms"
-    url="https://docs.astro.build/guides/deploy/"
   />
 </ContentSection>
