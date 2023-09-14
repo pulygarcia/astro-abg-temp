@@ -1,0 +1,63 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const features: Array<FeatureItem> = [
+  {
+    title: "Habilidades blandas",
+    description:
+      "Trabajo en equipo, comprometido y honesto, capacidad de adaptación. Me gusta compartir puntos de vista y recibir opiniones acerca de mis trabajos.",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "Intereses",
+    description:
+      "Conseguir un nivel de inglés avanzado. Participar en un equipo como desarrollador.",
+    icon: "mdi:account",
+  },
+  {
+    title: "Estudios",
+    description:
+      "Estudiante de tecnicatura en programación. Certificado por otras instituciones de forma autodidacta en tecnologías de desarrollo web.",
+    icon: "mdi:feather",
+  },
+  {
+    title: "Idiomas",
+    description:
+      "Estudiante de inglés activo. Actual nivel A2-B1. Español nativo.",
+    icon: "mdi:account-voice",
+  },
+  {
+    title: "Pasatiempos",
+    description:
+      "Pádel, compartir con seres queridos, escuchar podcasts relacionados a lo que me gusta, películas.",
+    icon: "mdi:bullseye-arrow",
+  },
+  {
+    title: "Ubicación",
+    description:
+      "Concepción Tucumán - Argentina.",
+    icon: "mdi:location",
+  }
+];
+---
+
+<ContentSection title="Sobre mí" id="about">
+  <Fragment slot="lead">
+    Conocé más <span class="text-primary">acerca</span> de mí.
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>

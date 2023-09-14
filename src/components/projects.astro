@@ -3,13 +3,13 @@ import ContentSection from "~/components/content-section.astro";
 import ProjectCard from "~/components/project-card.astro";
 ---
 
-<ContentSection title="Proyectos" id="showcase">
+<ContentSection title="Proyectos" id="projects">
   <Fragment slot="lead">
     Algunos <span class="text-primary">proyectos</span> que creé y en los que participé.
   </Fragment>
   <div class="max-w-6xl space-y-2">
-    <div class="grid grid-cols-1 gap-10">
-      <ProjectCard src="/shop-vue-cap.PNG" title="Shopfire" description="Panel de administración (agregar, editar y eliminar productos). + Carrito y total a pagar." technologies="Vue - Pinia - Tailwindcss - Firebase - Routing"/>
+    <div class="grid grid-cols-1 gap-10 md:gap-14">
+      <ProjectCard src="/shop-vue-cap.PNG" title="Shopfire" description="Vista principal de tienda, filtros y Panel de administración (agregar, editar y eliminar productos). + Carrito y total a pagar." technologies="Vue - Pinia - Tailwindcss - Firebase - Routing"/>
 
       <ProjectCard src="/proyecto-gastos-vue.PNG" title="Control gastos" description="Seguimiento de gastos, filtrar por categoría, eliminar, editar y añadir nuevos gastos. Calculo de total gastado y restante." technologies="Vue - Css"/>
 
