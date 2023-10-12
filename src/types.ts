@@ -1,10 +1,10 @@
-export interface CompatibilityItem {
+export interface technologieItem {
   icon: string;
   title: string;
   url: string;
 }
 
-export interface FeatureItem {
+export interface aboutItem {
   description: string;
   icon: string;
   title: string;
