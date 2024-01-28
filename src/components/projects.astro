@@ -1,6 +1,44 @@
 ---
 import ContentSection from "~/components/content-section.astro";
 import ProjectCard from "~/components/project-card.astro";
+
+export const projects = [
+  {
+    title: 'Sushi app',
+    imageSrc: '/aspid.PNG',
+    description: 'Sushi SPA con información de tienda y menú modificable por usuarios registrados como administrador (autenticación con firebase). Permite agregar al menu, editar información de los items y eliminarlos. Notificaciones y alertas de confirmación en acciones.',
+    technologies: 'Vue - Tailwindcss - Firebase - Vuefire - Pinia - Routing',
+    link: 'https://sushimenu-dfb1c.web.app/'
+  },
+  {
+    title: 'Guía películas API',
+    imageSrc: '/movies-guide.PNG',
+    description: 'Guía de películas TMDB API. Buscador, vista de información y favoritos persistente, responsive, con pequeñas notificaciones, animaciones y feedback de carga con loader.',
+    technologies: 'Vue - Pinia - Axios - Tailwindcss - Routing',
+    link: 'https://movies-guide-vue.vercel.app/'
+  },
+  {
+    title: 'Shopfire',
+    imageSrc: '/shop-vue-cap.PNG',
+    description: 'Shop virtual, filtros y Panel de administración (ver ventas realizadas, agregar, editar y eliminar productos utilizando firebase como base de datos). + Carrito y total a pagar simulando cupones.',
+    technologies: 'Vue - Pinia - Tailwindcss - Firebase - Routing',
+    link: 'https://shopvue-b002b.web.app/'
+  },
+  {
+    title: 'Cotizador criptomonedas',
+    imageSrc: '/criptos-vue.PNG',
+    description: 'Pequeña app cotizador de criptomonedas mediante API de cryptocompare',
+    technologies: 'Vue - Css',
+    link: 'https://cotizador-crypto-vue-puly.netlify.app'
+  },
+  {
+    title: 'Control gastos',
+    imageSrc: '/gastos-2.PNG',
+    description: 'Seguimiento de gastos, filtrar por categoría, eliminar, editar y añadir nuevos gastos. Calculo de total gastado y restante. Persistencia con LocalStorage.',
+    technologies: 'Vue - Css - SFC',
+    link: 'https://control-gastos-vue-puly.netlify.app'
+  },
+]
 ---
 
 <ContentSection title="Proyectos" id="projects">
@@ -9,16 +47,11 @@ import ProjectCard from "~/components/project-card.astro";
   </Fragment>
   <div class="max-w-6xl space-y-2">
     <div class="grid grid-cols-1 gap-10 md:gap-14">
-      <ProjectCard href="https://sushimenu-dfb1c.web.app/" src="/aspid.PNG" title="Sushi app" description="Sushi SPA con información de tienda y menú modificable por usuarios registrados como administrador (autenticación con firebase). Permite agregar al menu, editar información de los items y eliminarlos. Notificaciones y alertas de confirmación en acciones." technologies="Vue - Tailwindcss - Firebase - Vuefire - Pinia - Routing"/>
-      
-      <ProjectCard href="https://movies-guide-vue.vercel.app/" src="/movies-guide.PNG" title="Guía películas API" description="Guía de películas TMDB API. Buscador, vista de información y favoritos persistente, responsive, con pequeñas notificaciones, animaciones y feedback de carga con loader." technologies="Vue - Pinia - Axios - Tailwindcss - Routing"/>
-
-      <ProjectCard href="https://shopvue-b002b.web.app/" src="/shop-vue-cap.PNG" title="Shopfire" description="Shop virtual, filtros y Panel de administración (ver ventas realizadas, agregar, editar y eliminar productos utilizando firebase como base de datos). + Carrito y total a pagar simulando cupones." technologies="Vue - Pinia - Tailwindcss - Firebase - Routing"/>
-
-      <ProjectCard href="https://cotizador-crypto-vue-puly.netlify.app" src="/criptos-vue.PNG" title="Cotizador criptomonedas" description="Pequeña app cotizador de criptomonedas mediante API de cryptocompare" technologies="Vue - Css"/>
-
-      <ProjectCard href="https://control-gastos-vue-puly.netlify.app" src="/gastos-2.PNG" title="Control gastos" description="Seguimiento de gastos, filtrar por categoría, eliminar, editar y añadir nuevos gastos. Calculo de total gastado y restante. Persistencia con LocalStorage." technologies="Vue - Css - SFC"/>
-
+      {
+        projects.map((project) => (
+          <ProjectCard project={project}/>
+        ))
+      }
     </div>
   </div>
 </ContentSection>
