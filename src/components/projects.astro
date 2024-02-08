@@ -4,9 +4,9 @@ import ProjectCard from "~/components/project-card.astro";
 
 export const projects = [
   {
-    title: 'Sushi app',
+    title: 'Sushi menu app',
     imageSrc: '/aspid.PNG',
-    description: 'Sushi SPA con información de tienda y menú modificable por usuarios registrados como administrador (autenticación con firebase). Permite agregar al menu, editar información de los items y eliminarlos. Notificaciones y alertas de confirmación en acciones.',
+    description: 'Sushi SPA con información de tienda y menú modificable por usuarios registrados como administrador (autenticación con firebase). Permite agregar items al menu, editar información y eliminarlos. Notificaciones y alertas de confirmación en acciones.',
     technologies: 'Vue - Tailwindcss - Firebase - Vuefire - Pinia - Routing',
     link: 'https://sushimenu-dfb1c.web.app/'
   },
@@ -20,7 +20,7 @@ export const projects = [
   {
     title: 'Shopfire',
     imageSrc: '/shop-vue-cap.PNG',
-    description: 'Shop virtual, filtros y Panel de administración (ver ventas realizadas, agregar, editar y eliminar productos utilizando firebase como base de datos). + Carrito y total a pagar simulando cupones.',
+    description: 'Shop virtual, filtros y Panel de administración (ver ventas realizadas, cargar productos, editar y eliminar utilizando firebase como servicio de DB). Carrito y total a pagar simulando cupones de descuento.',
     technologies: 'Vue - Pinia - Tailwindcss - Firebase - Routing',
     link: 'https://shopvue-b002b.web.app/'
   },
@@ -43,10 +43,10 @@ export const projects = [
 
 <ContentSection title="Proyectos" id="projects">
   <Fragment slot="lead">
-    Algunos <span class="text-primary">proyectos</span> que creé y en los que participé.
+    Algunos <span class="text-primary">proyectos</span> que he construído en mi aprendizaje.
   </Fragment>
   <div class="max-w-6xl space-y-2">
-    <div class="grid grid-cols-1 gap-10 md:gap-14">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
       {
         projects.map((project) => (
           <ProjectCard project={project}/>

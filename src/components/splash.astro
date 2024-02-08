@@ -1,7 +1,4 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import meImage from "~/assets/puly-png.png";
-import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
 
 const widths = [450, 800];
@@ -10,12 +7,9 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
 
 <section class="relative h-full bg-black" id="start">
   <Starfield />
-  <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
-    <HeroImage />
-  </div>
-  <div class="relative grid h-full place-items-center sm:grid-cols-2">
+  <div class="relative grid h-full">
     <h2
-      class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end text-center text-8xl text-white font-extrabold"
+      class="flex flex-col gap-2 justify-center text-center text-8xl text-white font-extrabold"
     >
       Puly G.
       <div
@@ -25,18 +19,6 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
         <br /> Developer.
       </div>
     </h2>
-    <div
-      id="puly"
-      class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
-    >
-      <Picture
-        class="h-full w-full object-cover"
-        src={meImage}
-        widths={widths}
-        sizes={sizes}
-        loading="eager"
-        alt="Me on my desk"
-      />
     </div>
   </div>
 </section>
