@@ -7,36 +7,29 @@ export const projects = [
     title: 'Sushi menu app',
     imageSrc: '/aspid.PNG',
     description: 'Sushi SPA con información de tienda y menú modificable por usuarios registrados como administrador (autenticación con firebase). Permite agregar items al menu, editar información y eliminarlos. Notificaciones y alertas de confirmación en acciones.',
-    technologies: 'Vue - Tailwindcss - Firebase - Vuefire - Pinia - Routing',
+    technologies: ['Vue 3', 'Tailwindcss', 'Firebase', 'Pinia', 'Routing'],
     link: 'https://sushimenu-dfb1c.web.app/'
-  },
-  {
-    title: 'Guía películas API',
-    imageSrc: '/movies-guide.PNG',
-    description: 'Guía de películas TMDB API. Buscador, vista de información y favoritos persistente, responsive, con pequeñas notificaciones, animaciones y feedback de carga con loader.',
-    technologies: 'Vue - Pinia - Axios - Tailwindcss - Routing',
-    link: 'https://movies-guide-vue.vercel.app/'
   },
   {
     title: 'Rest API Product tracker',
     imageSrc: '/tracker-app.PNG',
-    description: 'Rest API MVC seguimiento de stock de productos y control. Endpoints de registro y autenticación de usuarios con envío de emails y json web tokens, agregando validaciones tanto en backend como en frontend (repositorio frontend en README).',
-    technologies: 'Node.js - Express - MongoDB - Mongoose - Mailtrap - Jsonwebtoken - Bcrypt',
+    description: 'Rest API MVC seguimiento de stock de productos y control. Endpoints de registro y autenticación de usuarios con envío de emails y json web tokens, sistema seguro y con validaciones que incrementan seguridad y disminuyen posibles errores (repositorio frontend de la app en README).',
+    technologies: ['Node.js', 'Express', 'MongoDB', 'Mongoose', 'Mailtrap', 'Jsonwebtoken', 'Bcrypt'],
     link: 'https://github.com/pulygarcia/product-tracker-rest-api'
+  },
+  {
+    title: 'God Candle',
+    imageSrc: '/god-candle-quotes.PNG',
+    description: 'Blog sobre inversiones dentro del mercado de las criptomonedas con Cotizaciones en Tiempo Real de todos los activos top 100, diferentes secciones de información como proyectos con potencial crecimiento, herramientas altamente útiles, estrategias y demás. Construído con Nuxt 3. Lighthouse performance 100 escritorio y móvil.',
+    technologies: ['Nuxt 3', 'API', 'Routing', 'DaysiUI'],
+    link: 'https://god-candle.netlify.app/'
   },
   {
     title: 'Shopfire',
     imageSrc: '/shop-vue-cap.PNG',
     description: 'Shop virtual, filtros y Panel de administración (ver ventas realizadas, cargar productos, editar y eliminar utilizando firebase como servicio de DB). Carrito y total a pagar simulando cupones de descuento.',
-    technologies: 'Vue - Pinia - Tailwindcss - Firebase - Routing',
+    technologies: ['Vue 3', 'Pinia', 'Tailwindcss', 'Firebase', 'Routing'],
     link: 'https://shopvue-b002b.web.app/'
-  },
-  {
-    title: 'Cotizador criptomonedas',
-    imageSrc: '/criptos-vue.PNG',
-    description: 'Pequeña app cotizador de criptomonedas mediante API de cryptocompare',
-    technologies: 'Vue - Css',
-    link: 'https://cotizador-crypto-vue-puly.netlify.app'
   }
 ]
 ---

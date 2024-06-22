@@ -1,27 +1,21 @@
 ---
-const {project} = Astro.props;
+const { project } = Astro.props;
 ---
 
 <div class="rounded-xl overflow-hidden w-full bg-base-100 shadow-xl">
-    <figure><img src={project.imageSrc} alt={project.title} /></figure>
-    <div class="card-body p-6">
-      <h2 class="card-title">{project.title}</h2>
-      <p class="text-sm font-semibold mt-5">{project.description}</p>
-      <p class="text-gray-400 mt-5 text-xs md:text-sm">{project.technologies}</p>
-      <div class="card-actions justify-end">
-        <a href={project.link} class="mt-5 block text-right">
-            <button class="px-3 py-2 text-sm duration-100 border border-indigo-600 rounded-lg hover:bg-indigo-600 hover:text-white active:shadow-lg">Ver proyecto</button>
-        </a>
-      </div>
+  <figure><img src={project.imageSrc} alt={project.title} /></figure>
+  <div class="card-body p-6">
+    <h2 class="card-title">{project.title}</h2>
+    <p class="text-sm font-semibold mt-5">{project.description}</p>
+    <div class="flex items-center gap-2 flex-wrap my-5">
+      {project.technologies.map((tech:any) => (
+        <span class="dark:text-gray-100 border-[1px] border-rose-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700">{tech}</span>
+      ))}
     </div>
+    <div class="card-actions justify-end">
+      <a href={project.link} class="mt-5 block text-right">
+          <button class="px-3 py-2 text-sm duration-100 border border-indigo-600 rounded-lg hover:bg-indigo-600 hover:text-white active:shadow-lg">Ver proyecto</button>
+      </a>
+    </div>
+  </div>
 </div>
-
-
-
-
-
-
-
-
-
-
